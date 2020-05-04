@@ -625,7 +625,17 @@ END IF
 	</select>&nbsp;<a id="PayrollFrequencyValidation"></a>
 	</td>
 	<th>Gross <a id="GrossPayrollFrequencyType"></a>Income</th>
-	<td>R<input type="text" name="GrossPayrollIncome" value="<%=GrossPayrollIncome%>" size="8" onBlur="ValidateField('Number','GrossPayrollIncomeValidation',this.value)">&nbsp;<a id="GrossPayrollIncomeValidation"></a></td>
+
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text">R</span>
+  </div>
+  <input type="text" class="form-control" aria-label="Amount (to the nearest rand)" 
+  	value="<%=GrossPayrollIncome%>" onBlur="ValidateField('Number','GrossPayrollIncomeValidation',this.value)">>
+  <div class="input-group-append">
+    <span class="input-group-text">.00</span>
+  </div>
+</div>
 </tr>
 <tr>
 	<th>Pay Day</th>
